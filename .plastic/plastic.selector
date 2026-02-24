@@ -1,0 +1,4 @@
+repository "project labirynth/project labirynth@7972504590795@cloud"
+  path "/"
+    br "/main"
+    co "/main"

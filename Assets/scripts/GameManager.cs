@@ -7,6 +7,12 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
+    public int RedKey = 0;
+    public int GreenKey = 0;
+    public int GoldKey = 0;
+
+    public int Points = 0;
+
     [SerializeField] 
     [Range(1, 100)]
     int timeToEnd;
@@ -92,4 +98,24 @@ public void PauseGame()
     {
         PauseCheck();
     }
+
+    public void AddPoints(int points)
+    {
+        Points += points;
+    }
+
+    public void AddTime(int addTimeValue)
+    {
+        timeToEnd += addTimeValue;
+    }
+
+    public void FreezeTime(int freezeDuration)
+    {
+        CancelInvoke(nameof(Stopper));
+        InvokeRepeating(nameof(Stopper), freezeDuration, 1);
+    }
+
+
+
+
 }

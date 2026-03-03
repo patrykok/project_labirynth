@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     int timeToEnd;
 
     bool gamePaused = false;
+    bool endGame = false;
+    bool win = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,28 @@ public class GameManager : MonoBehaviour
     {
         timeToEnd--;
         Debug.Log($"Time: {timeToEnd}s");
+        if (timeToEnd <= 0)
+        {
+            timeToEnd = 0;
+            endGame = true;
+        }
+        if (endGame)
+        {
+            EndGame();
+        }
+    }
+
+    public void EndGame()
+    {
+        CancelInvoke(nameof(Stopper));
+        if (win)
+        {
+            Debug.Log("You Win!!! Reload?");
+        }
+        else
+        {
+            Debug.Log("You Lose!!! Reload?");
+        }
     }
         
 public void PauseGame()

@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] 
     [Range(1, 100)]
     int timeToEnd;
+
+    bool gamePaused = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,10 +33,39 @@ public class GameManager : MonoBehaviour
         Debug.Log($"Time: {timeToEnd}s");
     }
         
+public void PauseGame()
+    {
+        Debug.Log("Pause game");
+        Time.timeScale = 0;
+        gamePaused = true;
+    }
+
+    public void ResumeGame()
+    {
+        Debug.Log("Resume game");
+        Time.timeScale = 1;
+        gamePaused = false;
+    }
+    void PauseCheck()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (gamePaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
+    }
+
+
 
     // Update is called once per frame
     void Update()
     {
-        
+        PauseCheck();
     }
 }

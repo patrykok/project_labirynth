@@ -115,6 +115,21 @@ public void PauseGame()
         InvokeRepeating(nameof(Stopper), freezeDuration, 1);
     }
 
+public void AddKey(KeyColor color)
+    {
+        switch (color)
+        {
+            case KeyColor.Red:
+                RedKey++;
+                break;
+            case KeyColor.Green:
+                GreenKey++;
+                break;
+            case KeyColor.Gold:
+                GoldKey++;
+                break;
+        }
+    }
 
 
 

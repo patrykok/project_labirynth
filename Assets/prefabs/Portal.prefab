@@ -584,7 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otherPortal: {fileID: 0}
-  material: {fileID: 0}
+  material: {fileID: 2100000, guid: ed4be0a96f7f3a54081628316791e2b5, type: 2}
   myCamera: {fileID: 2213648808464519715}
   renderSurface: {fileID: 2213648806768401415}
   portalCollider: {fileID: 2213648808582813262}

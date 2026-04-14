@@ -134,6 +134,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3367610514a0e1e4d93b0c3419be1380, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &155623534 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2213648808582813262, guid: e85becbada19b2d4090fa466343c417b,
+    type: 3}
+  m_PrefabInstance: {fileID: 351139131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &234295261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -141,6 +147,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 323625762996558214, guid: e85becbada19b2d4090fa466343c417b,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2091125549}
+    - target: {fileID: 323625762996558214, guid: e85becbada19b2d4090fa466343c417b,
+        type: 3}
+      propertyPath: receiver
+      value: 
+      objectReference: {fileID: 155623534}
     - target: {fileID: 2213648808478139918, guid: e85becbada19b2d4090fa466343c417b,
         type: 3}
       propertyPath: m_RootOrder
@@ -208,6 +224,12 @@ PrefabInstance:
       objectReference: {fileID: 924201542}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e85becbada19b2d4090fa466343c417b, type: 3}
+--- !u!4 &314516401 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2213648808582813262, guid: e85becbada19b2d4090fa466343c417b,
+    type: 3}
+  m_PrefabInstance: {fileID: 234295261}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &322276334
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +511,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 323625762996558214, guid: e85becbada19b2d4090fa466343c417b,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2091125549}
+    - target: {fileID: 323625762996558214, guid: e85becbada19b2d4090fa466343c417b,
+        type: 3}
+      propertyPath: receiver
+      value: 
+      objectReference: {fileID: 314516401}
     - target: {fileID: 2213648808478139918, guid: e85becbada19b2d4090fa466343c417b,
         type: 3}
       propertyPath: m_RootOrder
@@ -1287,7 +1319,7 @@ GameObject:
   - component: {fileID: 2091125550}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
